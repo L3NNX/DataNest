@@ -82,7 +82,7 @@ export const verifySecret = async ({
         path: "/",
         httpOnly: true,
         sameSite: "strict",
-         secure: process.env.NODE_ENV === "production",
+        secure: true,
       });
   
       return parseStringify({ sessionId: session.$id });
@@ -93,14 +93,7 @@ export const verifySecret = async ({
 
   export const getCurrentUser = async () => {
     try {
-        const sessionClient = await createSessionClient();
-      
-      // Check if user is authenticated
-      if (!sessionClient.isAuthenticated) {
-        return null;
-      }
-
-       const { databases, account } = sessionClient;
+      const { databases, account } = await createSessionClient();
   
       const result = await account.get();
   
