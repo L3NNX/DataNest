@@ -94,3 +94,18 @@ export interface ShareInputProps {
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onRemove: (email: string) => void;
 }
+
+export interface UsageCategory {
+  size: number;
+  latestDate: string; // ISO string or Date, but your code uses string
+}
+
+export type TotalSpace = {
+  document: UsageCategory;
+  image: UsageCategory;
+  video: UsageCategory;
+  audio: UsageCategory;
+  other: UsageCategory;
+  used: number;
+  all: number;
+};
