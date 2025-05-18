@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="public/assets/icons/Datanest2.svg" alt="Datanest Logo" width="180" />
+</p>
 
-## Getting Started
+<h1 align="center">Datanest</h1>
+<p align="center">
+  <b>The only storage solution you need.</b><br>
+  Effortlessly upload, organize, and share your files in a beautiful, modern UI.
+</p>
 
-First, run the development server:
+<p align="center">
+  <img src="public/assets/images/files-2.png" alt="Datanest UI Preview" width="500" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Features
+
+- <img src="public/assets/icons/upload.svg" width="18" /> **Drag & Drop File Uploads**
+- <img src="public/assets/icons/documents.svg" width="18" /> **Document, Image, Video & Audio Support**
+- <img src="public/assets/icons/share.svg" width="18" /> **Easy File Sharing & Permissions**
+- <img src="public/assets/icons/dashboard.svg" width="18" /> **Dashboard with Usage Analytics**
+- <img src="public/assets/icons/edit.svg" width="18" /> **Rename, Delete, and Manage Files**
+- <img src="public/assets/icons/logout-indigo.svg" width="18" /> **Secure Auth & OTP Verification**
+- <img src="public/assets/icons/dots.svg" width="18" /> **Modern, Responsive UI (Next.js + Tailwind CSS)**
+
+---
+
+## 🛠️ Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/datanest.git
+   cd datanest
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Configure environment variables**
+
+   Create a `.env.local` file and add your Appwrite credentials:
+
+   ```env
+   NEXT_PUBLIC_APPWRITE_ENDPOINT=your-appwrite-endpoint
+   NEXT_PUBLIC_APPWRITE_PROJECT=your-project-id
+   NEXT_PUBLIC_APPWRITE_DATABASEID=your-database-id
+   NEXT_PUBLIC_APPWRITE_USERS_COLLECTION=your-users-collection-id
+   NEXT_PUBLIC_APPWRITE_FILES_COLLECTION=your-files-collection-id
+   NEXT_PUBLIC_APPWRITE_BUCKET=your-bucket-id
+   NEXT_APPWRITE_KEY=your-appwrite-api-key
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open [http://localhost:3000](http://localhost:3000) to view the app.**
+
+---
+
+## 📁 Folder Structure
+
+```
+app/                # Next.js app directory (routes, layouts, pages)
+components/         # Reusable UI components
+constants/          # App-wide constants
+hooks/              # Custom React hooks
+lib/                # Appwrite and utility functions
+public/             # Static assets (icons, images)
+types/              # TypeScript types and interfaces
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deploy on Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy your project instantly with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme):
 
-## Learn More
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new?utm_source=github&utm_medium=readme)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Learn More
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Appwrite Documentation](https://appwrite.io/docs)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🖼️ UI Preview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p align="center">
+  <img src="public/assets/images/files.png" alt="Datanest UI Screenshot" width="400" />
+</p>
+
+---
+
+## 📄 License
+
+This project is [MIT licensed](LICENSE).
+
+---
+
+<p align="center">
+  Made with <img src="public/assets/icons/heart.svg" width="16" /> by the Datanest team.
+</p>
