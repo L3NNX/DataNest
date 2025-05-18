@@ -101,11 +101,11 @@ export interface UsageCategory {
 }
 
 export type TotalSpace = {
-  document: UsageCategory;
-  image: UsageCategory;
-  video: UsageCategory;
-  audio: UsageCategory;
-  other: UsageCategory;
+  document?: UsageCategory | null;
+  image?: UsageCategory | null;
+  video?: UsageCategory | null;
+  audio?: UsageCategory | null;
+  other?: UsageCategory | null;
   used: number;
   all: number;
 };

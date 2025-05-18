@@ -185,35 +185,39 @@ export const constructDownloadUrl = (bucketFileId: string) => {
 
 // DASHBOARD UTILS
 export const getUsageSummary = (totalSpace: TotalSpace) => {
+  const videoSize = totalSpace.video?.size || 0;
+  const audioSize = totalSpace.audio?.size || 0;
+
+  const videoDate = totalSpace.video?.latestDate || "";
+  const audioDate = totalSpace.audio?.latestDate || "";
+
+  const latestMediaDate = videoDate > audioDate ? videoDate : audioDate;
   return [
     {
       title: "Documents",
-      size: totalSpace.document.size,
-      latestDate: totalSpace.document.latestDate,
+    size: totalSpace.document?.size || 0,
+      latestDate: totalSpace.document?.latestDate || "",
       icon: "/assets/icons/file-document-light.svg",
       url: "/documents",
     },
     {
       title: "Images",
-      size: totalSpace.image.size,
-      latestDate: totalSpace.image.latestDate,
+      size: totalSpace.image?.size || 0,
+      latestDate: totalSpace.image?.latestDate,
       icon: "/assets/icons/file-image-light.svg",
       url: "/images",
     },
     {
       title: "Media",
-      size: totalSpace.video.size + totalSpace.audio.size,
-      latestDate:
-        totalSpace.video.latestDate > totalSpace.audio.latestDate
-          ? totalSpace.video.latestDate
-          : totalSpace.audio.latestDate,
+           size: videoSize + audioSize,
+      latestDate: latestMediaDate,
       icon: "/assets/icons/file-video-light.svg",
       url: "/media",
     },
     {
       title: "Others",
-      size: totalSpace.other.size,
-      latestDate: totalSpace.other.latestDate,
+       size: totalSpace.other?.size || 0,
+      latestDate: totalSpace.other?.latestDate || "",
       icon: "/assets/icons/file-other-light.svg",
       url: "/others",
     },
